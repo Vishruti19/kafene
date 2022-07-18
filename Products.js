@@ -91,8 +91,8 @@ const filterData = () => {
       }
     }
   } else if (
-    !document.querySelector("#expired-filter").checked &&
-    document.querySelector("#low-stock-filter").checked
+    document.querySelector("#expired-filter").checked &&
+    !document.querySelector("#low-stock-filter").checked
   ) {
     for (let row of trow) {
       const date = row.querySelector(".expiryDate").textContent;
@@ -111,8 +111,8 @@ const filterData = () => {
       }
     }
   } else if (
-    document.querySelector("#expired-filter").checked &&
-    !document.querySelector("#low-stock-filter").checked
+    !document.querySelector("#expired-filter").checked &&
+    document.querySelector("#low-stock-filter").checked
   ) {
     for (let row of trow) {
       const stock = row.querySelector(".stock").textContent;
