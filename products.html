@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body id="login-body">
+    <header>
+      <div id="logo">
+        <img
+          src="https://edu-web-fundamentals.web.app/static/media/logo.58169365.png"
+          alt="logo"
+          id="logo-img"
+        />
+        <span class="logo-text">Kafene</span>
+      </div>
+
+      <ul id="menu">
+        <li class="menu-items orders-tab">
+          <a href="./orders.html">Orders</a>
+        </li>
+        <li class="menu-items products-tab">
+          <a href="./products.html">Products</a>
+        </li>
+        <li class="menu-items users-tab"><a href="./users.html">Users</a></li>
+      </ul>
+      <div class="logout">Logout</div>
+    </header>
+    <main id="order-section-container">
+      <h1 id="order-head">Products</h1>
+      <div id="sections-container">
+        <div class="section1">
+          <h3 id="filters-section-container">Filters</h3>
+          <p>Count: <span class="count-number"></span></p>
+          <div class="filters">
+            <div>
+              <input
+                type="checkbox"
+                name="expired"
+                id="expired-filter"
+                onclick="filterData()"
+                checked
+              />
+              <label for="expired-filter">Expired</label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="low-stock"
+                id="low-stock-filter"
+                onclick="filterData()"
+                checked
+              />
+              <label for="low-stock-filter">Low Stock</label>
+            </div>
+          </div>
+        </div>
+        <div class="section2">
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Product Name</th>
+                <th>Product Brand</th>
+                <th>Expiry Date</th>
+                <th>Unit Price</th>
+                <th>Stock</th>
+              </tr>
+            </thead>
+            <tbody class="table-body"></tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+    <script src="./Products.js"></script>
+  </body>
+</html>

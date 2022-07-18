@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body id="login-body">
+    <header>
+      <div id="logo">
+        <img
+          src="https://edu-web-fundamentals.web.app/static/media/logo.58169365.png"
+          alt="logo"
+          id="logo-img"
+        />
+        <span class="logo-text">Kafene</span>
+      </div>
+
+      <ul id="menu">
+        <li class="menu-items orders-tab">
+          <a href="./orders.html">Orders</a>
+        </li>
+        <li class="menu-items products-tab">
+          <a href="./products.html">Products</a>
+        </li>
+        <li class="menu-items users-tab"><a href="./users.html">Users</a></li>
+      </ul>
+      <div class="logout">Logout</div>
+    </header>
+    <main id="order-section-container">
+      <h1 id="order-head">Orders</h1>
+      <div id="sections-container">
+        <div class="section1">
+          <h3 id="filters-section-container">Filters</h3>
+          <p>Count: <span class="count-number"></span></p>
+          <div class="filters">
+            <div>
+              <input
+                type="checkbox"
+                name="New"
+                id="new-filter"
+                onclick="filterOrders(event)"
+                checked
+              />
+              <label for="new-filter">New</label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="Packed"
+                id="packed-filter"
+                onclick="filterOrders(event)"
+                checked
+              />
+              <label for="packed-filter">Packed</label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="InTransit"
+                id="in-transit-filter"
+                onclick="filterOrders(event)"
+                checked
+              />
+              <label for="in-transit-filter">In Transit</label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="Delivered"
+                id="delivered-filter"
+                onclick="filterOrders(event)"
+                checked
+              />
+              <label for="delivered-filter">Delivered</label>
+            </div>
+          </div>
+        </div>
+        <div class="section2">
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Customer</th>
+                <th>Date</th>
+                <th>Amount</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody class="table-body"></tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+    <script src="./Orders.js"></script>
+  </body>
+</html>

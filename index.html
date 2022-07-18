@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body id="login-body">
+    <header>
+      <div id="logo">
+        <img
+          src="https://edu-web-fundamentals.web.app/static/media/logo.58169365.png"
+          alt="logo"
+          id="logo-img"
+        />
+        <span class="logo-text">Kafene</span>
+      </div>
+
+      <ul id="menu">
+        <li class="menu-items"><a href="#">Orders</a></li>
+        <li class="menu-items"><a href="#">Products</a></li>
+        <li class="menu-items"><a href="#">Users</a></li>
+      </ul>
+    </header>
+    <main id="form-container">
+      <form action="" id="login-form">
+        <h1 class="sign-in form-content">Sign In</h1>
+        <input
+          type="text"
+          name="username"
+          id="username-field"
+          class="login-form-field form-content"
+          placeholder="Enter Username"
+        />
+        <input
+          type="password"
+          name="password"
+          id="password-field"
+          class="login-form-field form-content"
+          placeholder="Enter Password"
+        />
+        <input
+          type="submit"
+          value="Login"
+          id="login-form-submit"
+          class="form-content"
+        />
+      </form>
+    </main>
+    <script src="./Login.js"></script>
+  </body>
+</html>
